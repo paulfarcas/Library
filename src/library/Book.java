@@ -9,7 +9,6 @@ public class Book {
     
     Book() {
         System.out.println("You have to set a name, an author, a price and a quantity for this book.");
-        System.out.println("Push");
     }
     
     Book(String title, Author author, double price, int quantity) {
