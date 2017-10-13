@@ -11,12 +11,12 @@ public class Book {
         System.out.println("You have to set a name, an author, a price and a quantity for this book.");
     }
     
-    Book(String title, Author author, double price, int quantity) {
+    /*Book(String title, Author author, double price, int quantity) {
         this.title = title;
         this.author = author;
         this.price = price;
         this.quantity = quantity;
-    }
+    }*/
     
     Book(String title, Author[] authors, double price, int quantity) {
         this.title = title;
