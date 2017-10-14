@@ -28,5 +28,6 @@ public class Library {
         
             //System.out.println(book.getAuthor(i));
         bookWithAuthors.printBookAuthors();
+        Book.BooksTotalNumber();
     }
 }

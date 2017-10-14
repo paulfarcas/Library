@@ -23,6 +23,7 @@ public class Book {
         this.authors = authors;
         this.price = price;
         this.quantity = quantity;
+        booksTotal ++;
     }
     
     public String getTitle() {
@@ -57,6 +58,14 @@ public class Book {
         this.quantity = quantity;
     }
     
+    static void BooksTotalNumber() {
+        if(booksTotal == 1) {
+            System.out.println("There is " + booksTotal + " book in our library.");
+        } else {
+            System.out.println("There are " + booksTotal + " books in our library.");
+        }
+    }
+    
     public void printBook() {
         System.out.println("The book title is " + title + ", the author is " + author.printAuthor());
         System.out.println("The book price is " + price + " and we have " + quantity + " books.");
@@ -82,4 +91,6 @@ public class Book {
     private Author author;
     private double price;
     private int quantity;
+    private Description description;
+    private static int booksTotal = 0;
 }
