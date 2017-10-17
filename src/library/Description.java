@@ -11,13 +11,8 @@ package library;
 class Description {
     
     Description(int year, String description) {
-        noID ++;
         this.year = year;
         this.description = description;
-    }
-    
-    public long getNoID() {
-        return noID;
     }
     
     public int getYear() {
@@ -36,14 +31,16 @@ class Description {
         this.description = description;
     }
     
-    
+    public static long getBookRegistrationNumber() {
+        return bookRegistrationNumber++;
+    }
     
     @Override
     public String toString() {
-        return "noId - " + noID + "\nyear - " + year + "\ndescription - " + description;
+        return "Book Registration Number - " + bookRegistrationNumber + "\nyear - " + year + "\ndescription - " + description;
     }
     
-    private static long noID = 1111111;
+    private static long bookRegistrationNumber = 1111111;
     private int year;
     private String description;
 }
