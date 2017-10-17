@@ -18,11 +18,12 @@ public class Book {
         this.quantity = quantity;
     }*/
     
-    Book(String title, Author[] authors, double price, int quantity) {
+    Book(String title, Author[] authors, double price, int quantity, Description description) {
         this.title = title;
         this.authors = authors;
         this.price = price;
         this.quantity = quantity;
+        this.description = description;
         booksTotal ++;
     }
     
@@ -58,7 +59,7 @@ public class Book {
         this.quantity = quantity;
     }
     
-    static void BooksTotalNumber() {
+    public static void BooksTotalNumber() {
         if(booksTotal == 1) {
             System.out.println("There is " + booksTotal + " book in our library.");
         } else {
@@ -77,6 +78,8 @@ public class Book {
             System.out.println("\t" + authors[i].printAuthor());
         }
         System.out.println("The book price is " + price + " and we have " + quantity + " books.");
+        System.out.println("The book reg. nb. is " + Description.getBookRegistrationNumber() + ".");
+        System.out.println("The year is " + description.getYear() + description.getDescription());
     }
     
     @Override
