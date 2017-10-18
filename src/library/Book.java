@@ -77,9 +77,10 @@ public class Book {
         for(int i=0; i < authors.length; i++) {
             System.out.println("\t" + authors[i].printAuthor());
         }
-        System.out.println("The book price is " + price + " and we have " + quantity + " books.");
-        System.out.println("The book reg. nb. is " + Description.getBookRegistrationNumber() + ".");
-        System.out.println("The year is " + description.getYear() + description.getDescription());
+        System.out.println("The book's price is " + price + " and we have " + quantity + " books.");
+        System.out.println("The book's reg. nb. is " + Description.getBookRegistrationNumber() + ".");
+        System.out.println("The book's year is " + description.getYear() + description.getDescription() + ", written in " + description.getLang()
+                + " and published by " + description.getPublisher() + ".");
     }
     
     @Override
