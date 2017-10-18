@@ -79,7 +79,7 @@ public class Book {
         }
         System.out.println("The book's price is " + price + " and we have " + quantity + " books.");
         System.out.println("The book's reg. nb. is " + Description.getBookRegistrationNumber() + ".");
-        System.out.println("The book's year is " + description.getYear() + description.getDescription() + ", written in " + description.getLang()
+        System.out.println("The book's year is " + description.getYear() + description.getDescription() + ", written in " + description.getLanguage()
                 + " and published by " + description.getPublisher() + ".");
     }
     

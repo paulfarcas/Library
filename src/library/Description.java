@@ -11,10 +11,10 @@ package library;
 
 class Description {
     
-    Description(int year, String description, Languages lang, String publisher) {
+    Description(int year, String description, Languages language, String publisher) {
         this.year = year;
         this.description = description;
-        this.lang = lang;
+        this.language = language;
         this.publisher = publisher;
     }
     
@@ -34,22 +34,22 @@ class Description {
         this.description = description;
     }
     
-    public String getLang() {
-        String language = "";
-        switch(lang) {
-            case ENGLISH : language = "english";
+    public String getLanguage() {
+        String languages = "";
+        switch(language) {
+            case ENGLISH : languages = "english";
                             break;
-            case FRENCH : language = "french";
+            case FRENCH : languages = "french";
                             break;
-            case GERMAN : language = "german";
+            case GERMAN : languages = "german";
                             break;
-            case SPANISH : language = "spanish";
+            case SPANISH : languages = "spanish";
                             break;
-            case ROMANIAN : language = "romanian";
+            case ROMANIAN : languages = "romanian";
                             break;
-            case OTHER : language = "other";
+            case OTHER : languages = "other";
         }
-        return language;
+        return languages;
     }
     
     public String getPublisher() {
@@ -67,12 +67,12 @@ class Description {
     @Override
     public String toString() {
         return "Book Registration Number - " + bookRegistrationNumber + "\nyear - " + year + "\ndescription - " + description
-                + "\nlangue - " + lang + "\npublisher - " + publisher;
+                + "\nlanguage - " + language + "\npublisher - " + publisher;
     }
     
     private static long bookRegistrationNumber = 1111111;
     private int year;
     private String description;
-    private Languages lang;
+    private Languages language;
     private String publisher;
 }
