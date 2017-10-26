@@ -1,6 +1,8 @@
 
 package library;
 
+import java.util.Random;
+
 /**
  *
  * @author Paul
@@ -59,6 +61,22 @@ public class Book {
         this.quantity = quantity;
     }
     
+    public long getRandom(long min, long max) {
+        Random random = new Random();
+        return   random.nextLong() % (max - min) + max;
+    }
+    
+    public long getISBN() {
+        long eanNumber = 9780000000000L;
+        long prefixNumber = (long)getRandom(911111111L, 999999999L);
+        ISBNnumber = eanNumber + prefixNumber;
+        return ISBNnumber;
+    }
+    
+    public void setISBN(long ISBNnumber) {
+        this.ISBNnumber = ISBNnumber;
+    }
+    
     public static void BooksTotalNumber() {
         if(booksTotal == 1) {
             System.out.println("There is " + booksTotal + " book in our library.");
@@ -81,6 +99,7 @@ public class Book {
         System.out.println("The book's reg. nb. is " + Description.getBookRegistrationNumber() + ".");
         System.out.println("The book's year is " + description.getYear() + description.getDescription() + ", written in " + description.getLanguage()
                 + " and published by " + description.getPublisher() + ".");
+        System.out.println("The ISBN nb. is " + getISBN() + ".");
     }
     
     @Override
@@ -97,4 +116,5 @@ public class Book {
     private int quantity;
     private Description description;
     private static int booksTotal = 0;
+    private long ISBNnumber; 
 }
