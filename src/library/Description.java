@@ -1,12 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package library;
 
 /**
- *
- * @author Paul
+ * A class to describe a book's description. 
+ * 
+ * @author Paul Farcas
+ * @version 1.01 
+ * @since Oct 2017
  */
 
 class Description {
@@ -70,7 +70,7 @@ class Description {
                 + "\nlanguage - " + language + "\npublisher - " + publisher;
     }
     
-    private static long bookRegistrationNumber = 1111111;
+    public static long bookRegistrationNumber = 1111111;
     private int year;
     private String description;
     private Languages language;

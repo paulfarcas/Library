@@ -2,9 +2,13 @@
 package library;
 
 /**
- *
- * @author Paul
+ * A class to describe a book's author. 
+ * 
+ * @author Paul Farcas
+ * @version 1.01 
+ * @since Oct 2017
  */
+
 public class Author {
     
     public Author() {

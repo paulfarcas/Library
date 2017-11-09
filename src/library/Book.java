@@ -4,9 +4,13 @@ package library;
 import java.util.Random;
 
 /**
- *
- * @author Paul
+ * A class to describe a book. 
+ * 
+ * @author Paul Farcas
+ * @version 1.01 
+ * @since Oct 2017
  */
+
 public class Book {
     
     Book() {
@@ -37,11 +41,11 @@ public class Book {
         this.title = title;
     }
     
-    public Author getAuthor() {
-        return author;
+    public Author[] getAuthor() {
+        return authors;
     }
     
-    public Author getAuthor(int i) {
+    public Author setAuthor(int i) {
         return this.authors[i];   
     }
     
@@ -77,6 +81,22 @@ public class Book {
         this.ISBNnumber = ISBNnumber;
     }
     
+    public String getAuthorName() {
+        return author.getName();
+    }
+    
+    public void setAuthorName(String name) {
+        author.setName(name);
+    }
+    
+    public String getAuthorGender() {
+        return author.getGender();
+    }
+    
+    public void setAuthorGender(String gender) {
+        author.setGender(gender);
+    }
+    
     public static void BooksTotalNumber() {
         if(booksTotal == 1) {
             System.out.println("There is " + booksTotal + " book in our library.");
@@ -109,12 +129,12 @@ public class Book {
         //}
     }
     
+    public static int booksTotal = 0;
     private String title;
     private Author[] authors;
     private Author author;
     private double price;
     private int quantity;
-    private Description description;
-    private static int booksTotal = 0;
+    Description description;
     private long ISBNnumber; 
 }

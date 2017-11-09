@@ -2,9 +2,13 @@
 package library;
 
 /**
- *
- * @author Paul
+ * A class to initialize a book. 
+ * 
+ * @author Paul Farcas
+ * @version 1.01 
+ * @since Oct 2017
  */
+
 public class Library {
 
     /**
@@ -22,15 +26,30 @@ public class Library {
         Book book = new Book("HTML", author, 25.99, 10, description);
         book.printBookAuthors();
         
-        Author[] authors = new Author[2];
+        /*Author[] authors = new Author[2];
         authors[0] = new Author("Peka", "masculine");
         authors[1] = new Author("Aqua", "feminine");
         Description otherDescription = new Description(2015, " and it's a book about how to create java projects", Languages.FRENCH, "Pub2");
         Book bookWithAuthors = new Book("Java", authors, 55.95, 3, otherDescription);
         
             //System.out.println(book.getAuthor(i));
-        bookWithAuthors.printBookAuthors();
+        bookWithAuthors.printBookAuthors();*/
         book.toString();
         Book.BooksTotalNumber();
+        
+        Book books = retriveBookFromDatabase();
+        BookView bookView = new BookView();
+        BookController bookController = new BookController(books, bookView);
+        bookController.updateBook();
     }
+    
+    private static Book retriveBookFromDatabase(){
+        Author[] authors = new Author[2];
+        authors[0] = new Author("Peka", "masculine");
+        authors[1] = new Author("Aqua", "feminine");
+        Description otherDescription = new Description(2015, " and it's a book about how to create java projects", Languages.FRENCH, "Pub2");
+        Book bookWithAuthors = new Book("Java", authors, 55.95, 3, otherDescription);
+        Book.BooksTotalNumber();
+        return bookWithAuthors;
+   }
 }
